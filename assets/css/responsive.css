@@ -1,0 +1,61 @@
+/* pc */
+@media (min-width: 992px) {
+}
+/* tablet & mobile vì 2 cái này có nhiều code chung*/
+@media (max-width: 991.98px) {
+  /*1 ẩn navbar */
+  .navbar {
+    display: none;
+  }
+  /* 2chuyển logo sang trái */
+  .header-top {
+    position: relative;
+    .header__logo {
+      position: absolute;
+      left: 50%;
+      translate: -50% -50%;
+    }
+  }
+  /* c3ăn lại vi tri menu icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    color: rgb(255, 255, 255);
+    width: 24px;
+  }
+  /* 4.overlay */
+  .menu-overlay {
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.4);
+    inset: 0px;
+    /*     inset: 0; để là ko là cách 4 cạnh =0 */
+    z-index: 1;
+    /* binh thuong se ẩn overlay đi */
+    opacity: 0;
+    /* thuộc tính này chỉ 
+    giúp nó ẩn đi thôi t vẫn kích vào 
+    các nuts khác đc nên cần thêm visibility để ẩn hẳn đi*/
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  /* 5. menu overlay show khi menu-checkbox đc check */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* table */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+/* moblile */
+@media (max-width: 767.98px) {
+}
+/* tạm aanr phần ko liên quan */
+.hero,
+.footer,
+main {
+  display: none;
+}

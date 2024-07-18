@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Register</h1>
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name</label> <br>
+                <input type="text" class="input i1" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label> <br>
+                <input type="email"class="input i2" id="email"required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label> <br>
+                <input type="password"class="input i3" id="password"required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label> <br>
+                <input type="password" class="input i4" id="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label> <br>
+                <input type="date" class="input i5" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="">Gender</label>
+                <div class="gender-group">
+                    <input type="radio" name="gender" id="male" class="r1" hidden>
+                    <label for="male" class="a1 a2">Male</label >
+
+                    <input type="radio" name="gender" id="female"class="r1" hidden>
+                    <label for="female"class="a1 a3">female</label>
+
+                    <input type="radio" name="gender" id="other"class="r1"hidden>
+                    <label for="other"class="a1 a4">other</label>
+                </div>
+            </div>
+            <button class="btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>

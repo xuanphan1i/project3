@@ -1,0 +1,75 @@
+.container {
+    width: 200px;
+    height: 200px;
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    animation: rotates 3s;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-direction: reverse; */
+    animation-direction: alternate;
+}
+@keyframes rotates {
+    from{
+        rotate: 0;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+.container2 {
+    width: 200px;
+    height: 200px;
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    animation: move 3s  ;
+    animation-iteration-count: infinite;
+    margin-bottom: 50px;
+}
+@keyframes move {
+    from{
+        transform:translateX(100px);
+    }
+    to{
+        transform:translateX(300px);
+
+    }
+}
+/* 3 */
+.container3 {
+    
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    animation: box3 5s infinite linear;
+}
+@keyframes box3 {
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(-100px,0);
+    }
+    
+    50%{
+        transform: translate(0,-100px);
+    }
+    75%{
+        transform: translate(-100px,-100px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+    
+}

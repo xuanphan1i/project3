@@ -1,0 +1,44 @@
+.container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* box shadow */
+/* img{
+    box-shadow: 0 0 20px rgb(238, 15, 15);
+} */
+
+/* drop filter */
+/* note: chỉ dành cho ảnh có nền trong suốt */
+.pic {
+  -webkit-filter: drop-shadow(0 0 20px rgb(255, 0, 0));
+  filter: drop-shadow(0 0 20px rgb(255, 0, 0));
+}
+.chat {
+  min-width: 300px;
+  background-color: rgb(255, 255, 255);
+  -webkit-filter: drop-shadow(0 0 5px rgb(7, 7, 7));
+  filter: drop-shadow(0 0 5px rgb(7, 7, 7));
+  padding: 15px;
+  border-radius: 20px;
+  position: relative;
+}
+.chat::after {
+  content: "";
+  position: absolute;
+  border: 30px solid;
+  border-color: rgb(255, 255, 255) transparent transparent transparent;
+  right: 8%;
+  bottom: -59px;
+}
+/* đổi màu icon */
+.icon {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(73%) saturate(4095%)
+    hue-rotate(258deg) brightness(97%) contrast(108%);
+}
+/* HUE */
+.im2{
+    max-width: 200px;
+    filter: hue-rotate(149deg);
+}

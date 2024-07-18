@@ -1,0 +1,16 @@
+/* aos */
+[data-aos] {
+    visibility: hidden;
+  }
+  [data-aos].animate__animated {
+    visibility: visible;
+  }
+body{
+    height: 1000px;
+}
+
+.an{
+    color: brown;
+    padding-top: 200px;
+    animation: infinite;
+}

@@ -1,0 +1,114 @@
+h1 {
+  color: rgb(255, 0, 0);
+  text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    .form-group {
+        margin-bottom: 20px;
+        width: 300px;
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgb(151, 147, 147);
+        }
+    }
+    .btn{
+        padding: 15px 30px;
+        background: rgb(255, 0, 30);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(50% ,50%);
+    }
+    .gender-group{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 10px;
+        .a1{
+            color: rgb(55, 255, 0);
+            margin-top: 10px;
+        }
+      
+    }
+}
+/* tạo lớp giả */
+.form-group .gender-group .a1{
+    position: relative;
+}
+/* bỏ uesr select khi click vào label */
+label{
+    user-select: none;
+}
+/* .r1::after, */
+.a1::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    border-radius: 50%;
+    left: -30px;
+    top: -2px;
+}
+
+.a1::after{
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 5px;
+}
+/* 1 */
+#male[type="radio"]:checked ~ .a2::before{
+    background-color: #fe0505;
+
+}
+#male[type="radio"]:checked~ .a2::after{
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    rotate: -45deg;
+}
+
+/* 2 */
+#female[type="radio"]:checked ~ .a3::before{
+    background-color: #fe0505;
+
+}
+#female[type="radio"]:checked~ .a3::after{
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    rotate: -45deg;
+}
+
+/* 3 */
+#other[type="radio"]:checked ~ .a4::before{
+    background-color: #fe0505;
+
+}
+#other[type="radio"]:checked~ .a4::after{
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    rotate: -45deg;
+}

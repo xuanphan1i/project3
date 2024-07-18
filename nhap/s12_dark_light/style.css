@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+
+}
+:root{
+    --color-light :#f1f1f1;
+    --color-dark  :#7a7a7a;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: 0.5s linear;
+    
+}
+/* bố của nền sáng và tối */
+.toggle-switch{
+    width: 200px;
+    position: relative;
+    display: flex;
+}
+/* tạo nền tối và lable là màu mặc định*/
+.label{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    border-radius: 54px;
+    cursor: pointer;
+    background-color: var(--color-dark);
+    border-radius: 54px;
+}
+/* tạo màu sáng */
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    border-radius: 54px;
+    cursor: pointer;
+    /* background-color: var(--color-light); */
+    border-radius: 54px;
+    transition: 0.5s linear;
+    border: 1px solid var(--color-dark);
+
+}
+/* khi input đc checked thì slider đổi nền trắng */
+.checkbox:checked ~ .slider{
+    background-color: var(--color-light);
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    top: 12px;
+    left: 16px;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    box-shadow: inset 20px 0 0 0 var(--color-light);
+    transition: 0.5s linear;
+}
+.checkbox:checked ~ .slider::before{
+    transform: translateX(95px);
+    /* background-color: var(--color-dark); */
+    box-shadow: none;
+    background-color: gold;
+}
+/* chuyển màu nền */
+body:has(:checked){
+    background-color: #ffff;
+}

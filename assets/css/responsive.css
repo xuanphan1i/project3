@@ -1,5 +1,8 @@
 /* pc */
 @media (min-width: 992px) {
+  .mobile_header{
+    display: none;
+  }
 }
 /* tablet & mobile vì 2 cái này có nhiều code chung*/
 @media (max-width: 991.98px) {
@@ -45,6 +48,50 @@
     opacity: 1;
     visibility: visible;
   }
+  /* 6. code cho menu drawer */
+  .menu-drawer{
+    position: fixed;
+    background-color: rgb(35, 23, 23);
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    box-sizing: border-box;
+    padding: 60px;
+  }
+  /* 7 kt neus co check thi hien menu drawer */
+  .menu-checkbox:checked~ .menu-drawer{
+    transform: translateX(0);
+  }
+  /* 8 menu top */
+  .close__menu{
+    width: 24px;
+    color: #fff;
+  }
+  /*  menu-drawer__top  */
+  .menu-drawer__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  /* navbar list--mobile */
+  #navbar__list--mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 2rem;
+    a{
+      color: #fff;
+    }
+  }
+  .navbar__link:hover{
+    background-color: rgb(84, 167, 1);
+  }
+
+
 }
 
 /* table */

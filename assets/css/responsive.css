@@ -1,6 +1,6 @@
 /* pc */
 @media (min-width: 992px) {
-  .mobile_header{
+  .mobile_header {
     display: none;
   }
 }
@@ -49,7 +49,7 @@
     visibility: visible;
   }
   /* 6. code cho menu drawer */
-  .menu-drawer{
+  .menu-drawer {
     position: fixed;
     background-color: rgb(35, 23, 23);
     inset: 0 40% 0 0;
@@ -60,38 +60,143 @@
     padding: 60px;
   }
   /* 7 kt neus co check thi hien menu drawer */
-  .menu-checkbox:checked~ .menu-drawer{
+  .menu-checkbox:checked ~ .menu-drawer {
     transform: translateX(0);
   }
   /* 8 menu top */
-  .close__menu{
+  .close__menu {
     width: 24px;
     color: #fff;
   }
   /*  menu-drawer__top  */
-  .menu-drawer__top{
+  .menu-drawer__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
   }
   /* navbar list--mobile */
-  #navbar__list--mobile{
+  #navbar__list--mobile {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     margin-top: 20px;
     font-size: 2rem;
-    a{
+    a {
       color: #fff;
     }
   }
-  .navbar__link:hover{
+  .navbar__link:hover {
     background-color: rgb(84, 167, 1);
   }
-
-
+  /* ===================== phanaf hero */
+  /* ta xoay flex-di... thành colum để nó xuống dong */
+  .hero {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .hero__content {
+    order: 2;
+    width: 80%;
+    text-align: center;
+    margin: 22px auto;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__row {
+    justify-content: center;
+  }
+  /* ===================  main================== */
+  /* khối service row*/
+  .service__row {
+    flex-direction: column;
+  }
+  .service__img {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .service-item {
+    width: 90%;
+    text-align: start;
+  }
+  .service__list {
+    text-align: center;
+  }
+  /* works list */
+  .work__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .work-item {
+    width: 100%;
+  }
+  /* about row */
+  .about {
+    padding-bottom: 100px;
+  }
+  .about-row {
+    flex-direction: column;
+    row-gap: 50px;
+    text-align: center;
+  }
+  .about__media {
+    width: 100%;
+  }
+  .about__img--big {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .about__img--small {
+    display: none;
+  }
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
+  /* team */
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  /* install  */
+  .install__img {
+    right: 0;
+  }
+  .install__inner {
+    justify-content: left;
+  }
+  .install__desc {
+    max-width: 450px;
+  }
+  /* blog */
+  .blog__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog__list {
+    order: 1;
+    margin-bottom: 50px;
+  }
+  .blog__content {
+    order: 2;
+    width: 90%;
+    text-align: center;
+  }
+  .blog__heading {
+    max-width: 100%;
+  }
+  .control {
+    justify-content: center;
+  }
+  /* =================footer=============== */
+  .footer__hidden--tablet{
+    display: none;
+  }
+  .footer__top{
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
 }
 
 /* table */
@@ -101,8 +206,4 @@
 @media (max-width: 767.98px) {
 }
 /* tạm aanr phần ko liên quan */
-.hero,
-.footer,
-main {
-  display: none;
-}
+

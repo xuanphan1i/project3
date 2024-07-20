@@ -59,6 +59,7 @@
     box-sizing: border-box;
     padding: 60px;
   }
+
   /* 7 kt neus co check thi hien menu drawer */
   .menu-checkbox:checked ~ .menu-drawer {
     transform: translateX(0);
@@ -80,12 +81,19 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 10px;
+    /* margin-top: 20px; */
     font-size: 2rem;
     a {
       color: #fff;
     }
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__item {
+    width: 100%;
   }
   .navbar__link:hover {
     background-color: rgb(84, 167, 1);
@@ -163,6 +171,9 @@
   /* install  */
   .install__img {
     right: 0;
+    width: 142px;
+    height: 261px;
+    object-fit: contain;
   }
   .install__inner {
     justify-content: left;
@@ -190,20 +201,111 @@
   .control {
     justify-content: center;
   }
-  /* =================footer=============== */
-  .footer__hidden--tablet{
-    display: none;
-  }
-  .footer__top{
-    grid-template-columns: 0.5fr 0.5fr 1fr;
-  }
 }
 
-/* table */
+/* table riêng những đặc điểm riêng cho table */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  /* =================footer=============== */
+  /* footer code cho tablet vì nó to ta để 3 cột đc còn sang mobile ta sẽ đc 2 cột,
+   nên ta sẽ để riêng, ta ẩn 1 cột đi */
+  .footer__hidden--tablet {
+    display: none;
+  }
+  .footer__top {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+  /* ẨN LOGIN ĐI==========================================  */
+  .Box_khac {
+    display: none;
+  }
 }
 /* moblile */
 @media (max-width: 767.98px) {
-}
-/* tạm aanr phần ko liên quan */
+  /* hearder */
+  .header__action {
+    display: none;
+  }
+  .header__logo {
+    top: 22px;
+  }
+  .menu-drawer {
+    inset: 0 20% 0 0;
+  }
+  /* box_khác */
+  .Box_khac {
+    margin-top: 30px;
+    .separarte {
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      margin: 10px 0;
+    }
+    li {
+      list-style: none;
+      margin-top: 10px;
+    }
+  }
+  /* =============Hero===================================== */
+  .hero__img-small {
+    display: none;
+  }
+  .hero__img-large {
+    width: 100%;
+    height: auto;
+  }
+  .hero__heading {
+    font-size: 3rem;
+  }
+  .hero__row {
+    flex-direction: column;
+    row-gap: 38px;
+  }
+  /* ====================   main=================== */
+  .service {
+    padding: 70px 0;
+  }
+  .section-heading {
+    font-size: 3rem;
+  }
+  .service__desc {
+    width: 93%;
+  }
+  .work__desc {
+    width: 100%;
+  }
+  .about {
+    padding-bottom: 40px;
+  }
+  .team__list {
+    grid-template-columns: 1fr;
+  }
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+  /* install */
+  .install__inner {
+    margin: 40px 0;
+  }
+  .appointment__inner {
+    padding: 30px 5px;
+  }
+  /* ===================footer------------------------ */
+  .footer {
+    margin-top: 70px;
 
+}
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    margin-bottom: 20px;
+  }
+  .footer__column{
+    border-bottom: 1px solid #406181;
+  }
+  .footer__hidden--tablet{
+    padding: 10px;
+  }
+  .f4{
+    border: none;
+  }
+  /* tạm aanr phần ko liên quan */
+}
